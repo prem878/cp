@@ -1,9 +1,4 @@
-#include<iostream>
-#include<stdint.h>
-#include<set>
-#include<vector>
-#include<cmath>
-#include<algorithm>
+#include<bits/stdc++.h>
 #define yes cout<<"Yes"
 #define no cout<<"No"
 #define INF 1e10
