@@ -23,6 +23,13 @@ void clearBit(int& n,int i){
   n=(n & mask);
 }
 
+void clearLastIBits(int& n,int i){
+  int mask=(-1<<i);
+  n=n&mask;
+}
+
+
+
 void update(int& n,int i,int val){
   int premask=1<<i;
   int mask=~premask;
