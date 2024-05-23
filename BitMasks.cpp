@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
 using namespace std;
-
+//BITMASKing
 bool isEven(int n){
   return (n & 1);
 }
