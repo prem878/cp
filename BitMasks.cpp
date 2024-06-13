@@ -36,6 +36,7 @@ void update(int& n,int i,int val){
   n=(n&mask) | val>>i;
 }
 
+
 int main(){
   //Perform bit masks
   
