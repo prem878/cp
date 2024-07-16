@@ -4,6 +4,8 @@
 #define pb push_back
 #define vi vector<int>
 #define vl vector<ll>
+#define pii pair<int,int>
+#define arr array
 #define fi first
 #define se second
 #define mp make_pair
