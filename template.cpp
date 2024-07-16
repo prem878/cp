@@ -1,50 +1,61 @@
-#include<bits/stdc++.h>
-#define yes cout<<"Yes"
-#define no cout<<"No"
-#define INF 1e10
-#define nl cout<<"\n"
-#define nINF INF*-1
-#define MOD 100000007
-#define Y cout<<"YES"
-#define N cout<<"NO"
-#define SIZE 1e7
-#define f first
-#define s second
+#include <bits/stdc++.h>
+#define MOD 9876543210
 #define ll long long
 #define pb push_back
+#define vi vector<int>
+#define vl vector<ll>
+#define fi first
+#define se second
+#define mp make_pair
+#define all(a) (a).begin(),(a).end()
 using namespace std;
-typedef long long int myint;
-int ar[100005];
-ll min(ll a,ll b){ if(a<b)return a; return b;}
-ll max(ll a,ll b){if(a>b)return a; return b;}
-ll gcd(ll a,ll b){ if( b==0) return a; return gcd(b,a%b);}
-ll lcm(ll a,ll b){return a/gcd(a,b)*b;}
-int min(int a ,int b){if(a<b)return a;return b;}
-int suma(int a[],int size){int rs=0;for(int i=0;i<size;++i)rs+=a[i];return rs;}
-void dbg(int a[],int k,int j){for(int i=k;i<=j;++i){ cout<<a[i]<<" ";}cout<<"\n";}
-void v_print(vector<int> v){for(int val: v){cout<<val<<"" ;}}
-void v_print(vector<ll>v){for(int val: v){cout<<val<<" ";}}
-bool sq(ll n){ return (sqrt(n)==floor(sqrt(n))); }
-bool cb(ll n){ return (cbrt(n)==floor(cbrt(n))); }
-bool isPrime(int n){if(n<=1) {return false;} for(int i=2;i<=n/2;++i){if(n%i==0){return false; }}return true;}
-ll pow(ll a,ll b){ll res=1;while(b>0){if(b&1){res=res*a;}a=a*a;b>>=1;}return res;}
-ll reverse(ll n){ll ans=0,rem;while(n!=0){rem=n%10;ans=ans*10+rem;n/=10;}return ans;}
-void dbgv(vector<int> v){for(auto& x: v)cout<<x<<" ";cout<<"\n";}
-void dbgvc(vector<char> v){for(auto& x : v)cout<<x<<" ";cout<<"\n";}
+const int pinf=INT_MAX;
+const int ninf=INT_MIN;
+const ll mod=1e9+7;
+template <typename T> 
+T max2(T x,T y){return x>y ? x: y;}
+template <typename T>
+T max3(T x,T y,T z){T mx=Max(x,y);mx=Max(mx,z);return mx;}
+template <typename T>
+T min2(T x,T y){return x>y ? y:x; }
+template <typename T>
+T min3(T x,T y,T z){T mn=Min(x,y);mn=Min(mn,z);return mn;}
+template <typename T>
+void debug(const vector<T>& v){for(const auto& it:v)cout<<it<<" "; cout<<"\n";}
+void see() {}
+template<typename T, typename... Args>
+void see(T& first, Args&... args) {std::cin >> first; see(args...);}
+void put() {}
+template<typename T, typename... Args>
+void put(T&& first, Args&&... args) {std::cout << first << " ";put(std::forward<Args>(args)...);}
+void putl() { std::cout << std::endl;}
+template<typename T, typename... Args>
+void putl(T&& first, Args&&... args) {std::cout << first << " ";putl(std::forward<Args>(args)...);}
+/* 便利な方法 */
+ll gcd(ll a, ll b) { if (b == 0) return a; return gcd(b, a % b); }
+ll lcm(ll a, ll b) { return a / gcd(a, b) * b; }
+ll pow(ll a, ll b) { ll res = 1; while (b > 0) { if (b & 1) { res = res * a; } a = a * a; b >>= 1; } return res; }
+bool sq(ll n) { return (sqrt(n) == floor(sqrt(n))); }
+bool cb(ll n) { return (cbrt(n) == floor(cbrt(n))); }
+bool isPrime(int n) { if (n <= 1) { return false; } for (int i = 2; i * i <= n; ++i) { if (n % i == 0) { return false; } } return true; }
+bool isSubstr(const string& t,const string& s){ return t.find(s)!=string::npos;}
+vector<int> primes(int n) { bool isPrime[n+1]; memset(isPrime, true, sizeof(isPrime)); vector<int> primes; for (int p = 2; p <= n; ++p) { if (isPrime[p]) { for (int i = p*p; i <= n; i += p) { isPrime[i] = false; } } } for (int i = 2; i <= n; ++i) { if (isPrime[i]) primes.push_back(i); } return primes; }
+void solve();
+void timeTaken(){auto start=chrono::high_resolution_clock::now();solve();cout<<"\n";auto end=chrono::high_resolution_clock::now();auto time=chrono::duration_cast<chrono::microseconds>(end-start);	cout<<"Time: "<<time.count();}
 //入力する前に問題を 回よく読んでください
 //解決する
 void solve(){
-	//CODE
-} 
-int main(){
-	ios_base::sync_with_stdio(false); 
+	
+}
+int main() {
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-	int tt;
-	tt=1;
-	//cin>>tt;
-	while(tt--){
-		solve();
-		cout<<"\n";
-	}
-	return 0;
+	int tt;	tt=1;
+//	cin>>tt;
+    while (tt--) {
+        solve();
+		//timeTaken();
+        cout << "\n";
+    }
+    return 0;
 }
