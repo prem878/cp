@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<vector<int>> adj;
+vector<vector<int>> adj; 
 bool isBipartite(){
   int n=adj.size();
   bool bipartite=false;
